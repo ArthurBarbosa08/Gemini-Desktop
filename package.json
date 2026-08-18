@@ -1,0 +1,30 @@
+{
+  "name": "gemini-desktop",
+  "version": "1.0.1",
+  "description": "Unofficial personal desktop client for Google Gemini with local workspace file integration.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.gemini.desktop",
+    "win": {
+      "target": "portable",
+      "icon": "icon.png"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "injector.js",
+      "package.json",
+      "icon.png"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^31.3.1",
+    "electron-builder": "^26.15.3"
+  },
+  "author": "Personal",
+  "license": "ISC"
+}
